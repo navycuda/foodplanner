@@ -1,0 +1,13 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav_item {
+  margin: 0 0.5rem 0 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+.nav_item:hover {
+  font-weight: 900;
+}
