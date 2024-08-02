@@ -23,3 +23,9 @@ Uses react, typescript and indexedDB.  Needs documentation.
 ## Shopping List
 
   generate a shopping list for today, according to the planning window
+
+
+## IndexedDB
+
+  Using indexeddb for persistant storage of data and some aspects of the 
+  application state.
