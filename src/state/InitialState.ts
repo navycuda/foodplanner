@@ -4,7 +4,6 @@ export enum AppView{
   Inventory = "Inventory",
   ShoppingList = "ShoppingList"
 }
-
 export interface AppState{
   view: AppView;
   setView: (appView:AppView)=>void;
@@ -53,18 +52,6 @@ export interface InitialState{
   inventory_data: InventoryItem[];
 }
 export const InitialStateKeys:{[state:string]:{keyPath:string,autoIncrement:boolean}} = {
-  // app: {
-  //   keyPath: "name",
-  //   autoIncrement: false
-  // },
-  // calendar: {
-  //   keyPath: "name",
-  //   autoIncrement: false
-  // },
-  // inventory: {
-  //   keyPath: "name",
-  //   autoIncrement: false
-  // },
   inventory_data: {
     keyPath: "id",
     autoIncrement: true
