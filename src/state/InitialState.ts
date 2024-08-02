@@ -45,11 +45,28 @@ export interface StoredInventoryItem extends InventoryItem{
 }
 
 
+export interface RecipeState{
+  data: Recipe[];
+  addRecipe: (e:React.FormEvent<HTMLFormElement>)=>void;
+}
+export interface InitialRecipeState{
+  data: Recipe[];
+}
+export interface Recipe{
+  name: string;
+}
+export interface StoredRecipe extends Recipe{
+  id: number;
+}
+
+
 export interface InitialState{
   app: InitialAppState;
   calendar: InitialCalendarState;
   inventory: InitialInventoryState;
   inventory_data: InventoryItem[];
+  recipes: RecipeState;
+  recipes_data: Recipe[];
 }
 export const InitialStateKeys:{[state:string]:{keyPath:string,autoIncrement:boolean}} = {
   inventory_data: {
@@ -67,7 +84,11 @@ export const InitialState:InitialState = {
   inventory: {
     data: []
   },
-  inventory_data: []
+  inventory_data: [],
+  recipes: {
+
+  },
+  recipes_data: []
 }
 
 
@@ -76,5 +97,7 @@ export const idbStores = {
   app: 'app',
   calendar: 'calendar',
   inventory: 'inventory',
-  inventory_data: 'inventory_data'
+  inventory_data: 'inventory_data',
+  recipes: 'recipes',
+  recipes_data: 'recipes_data'
 }
